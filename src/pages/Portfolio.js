@@ -1,10 +1,30 @@
+import { useEffect, useState } from "react"
+
 const Portfolio = () => {
+// On declare la variable joke et sa methode setJoke
+// les deux en meme temp grace a la methode useState
+    let [joke,setJoke] = useState(" ");
+
+    const loadJoke = () => {
+        fetch("https://api.chucknorris.io/jokes/random").then(response => response.json())
+        .then( data =>{
+            setJoke(data.value)
+            console.log(data);
+        })
+        
+    }
+
+    useEffect(()=>loadJoke(),[]);
+
     return (
         <section>
             <div className="container-fluid">
                 <div className="row">
+                    <div className="col">
                     <h1 className="text-center">Portfolio</h1>
-
+                    <button onClick={loadJoke}>Joke</button>
+                    <p>{joke}</p>
+                    </div>
                 </div>
                 <div className="row">
                     <div className="col">
