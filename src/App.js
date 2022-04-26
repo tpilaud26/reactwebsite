@@ -6,6 +6,7 @@ import Footer from './component/Footer';
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
+import Details from './pages/Details';
 
 import { BrowserRouter, Routes, Route, } from 'react-router-dom';
 
@@ -20,6 +21,8 @@ function App() {
           <Route path="/" element={ <Home/> }/>
           <Route path="/portfolio" element={ <Portfolio/> }/>
           <Route path="/contact" element={ <Contact name="Coucou les amis"/> }/>
+          <Route path="/portfolio/details/:id" element={ <Details/> }/>
+          <Route path="*" element={ <Home/> }/>
         </Routes>
       </BrowserRouter>
       <Footer />

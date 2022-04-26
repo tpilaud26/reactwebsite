@@ -14,8 +14,8 @@ const Home = () => {
                         <Love name="coding" />
                         <Love name="Léonie" />
                         <Love name="Football" />
-                        <Love name="le shit" />
-                        <Button class="p-2" start={10} />
+                        <Love name="lol" />
+                        <Button start={10} />
                         <Button start={0} />
                         <Button start={30} />
                         <p className="text-center">
